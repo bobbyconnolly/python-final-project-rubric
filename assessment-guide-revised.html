@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #475569;
+        margin-top: 1.5em;
+      }
+      .alert {
+        background-color: #f8fafc;
+        border-left: 4px solid #475569;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+      .warning {
+        background-color: #fff7ed;
+        border-left: 4px solid #ea580c;
+      }
+      .requirement {
+        background-color: #f0f9ff;
+        border-radius: 4px;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+      .template {
+        background-color: #f8fafc;
+        padding: 1rem;
+        border-radius: 4px;
+        margin: 1rem 0;
+        font-family: monospace;
+        white-space: pre-wrap;
+      }
+      /* Rubric Styles */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 5px;
+        text-align: center;
+        vertical-align: top;
+      }
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+      .header-row th {
+        text-align: left;
+        background-color: #e6e6e6;
+      }
+      .total-column {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        width: 12%;
+      }
+      .criteria-column {
+        text-align: center;
+        font-weight: bold;
+        width: 16%;
+      }
+      .disabled-cell {
+        background-color: #f5f5f5;
+      }
+      .satisfaction-column {
+        width: 18%;
+      }
+      .checkbox-list {
+        list-style: none;
+        padding-left: 0;
+      }
+      .checkbox-list li {
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Final Project Assessment Guide</h1>
+
+    <div class="alert warning">
+      <strong>Important Dates & Meeting Information:</strong>
+      <ul>
+        <li>You can schedule your meeting as of right now</li>
+        <li>
+          You must schedule your meeting <u>by November 27th</u> (the meeting itself can take place after this date)
+        </li>
+        <li>Schedule by sending me a mio, Teams message, or letting me know in person</li>
+        <li>Meetings can be held in person or over Teams</li>
+      </ul>
+    </div>
+
+    <h2>Project Requirements</h2>
+
+    <h3>Core Architecture</h3>
+    <p>Your project must implement one of the following architectures:</p>
+    <div class="requirement">
+      <h4>Option 1: Web Application (Recommended)</h4>
+      <ul>
+        <li>Python backend using Flask or Django</li>
+        <li>SQLite database integration</li>
+        <li>Web-based frontend</li>
+      </ul>
+    </div>
+
+    <div class="requirement">
+      <h4>Option 2: Standalone Application</h4>
+      <p>
+        Your project could be a game, visualization tool, data processor, or creative application - for example, making
+        a Pygame window that renders graphics, creating generative art, applying image effects, analyzing data sets, or
+        calling external APIs.
+      </p>
+    </div>
+
+    <h2>Technical Requirements & Assessment Criteria</h2>
+
+    <h3>Core Development (1.1, 2.2, 2.3 - totalling 14 marks)</h3>
+    <div class="requirement">
+      <p>These criteria evaluate how well your project is constructed overall:</p>
+      <ul>
+        <li>Does it work as a complete, polished product?</li>
+        <li>Is the code well-organized and maintainable?</li>
+        <li>Would another developer understand how your project is structured?</li>
+      </ul>
+    </div>
+
+    <h3>3.1 Debugger Usage (3 marks)</h3>
+    <div class="requirement">
+      <p>During your assessment meeting, you must demonstrate:</p>
+      <ul>
+        <li>Setting and using breakpoints in PyCharm</li>
+        <li>Inspecting variables during runtime execution</li>
+        <li>Step-through debugging of a meaningful interaction (e.g., route handling, data processing)</li>
+      </ul>
+    </div>
+
+    <h3>3.3 Debugging Strategies (3 marks)</h3>
+    <div class="requirement">
+      <p>You must include at least two (2) print statements in any of the following key areas of your program:</p>
+      <ul>
+        <li>Before and after database operations (e.g., <code>print(f"Inserting record: {data}")</code>)</li>
+        <li>When routes/endpoints are hit (e.g., <code>print(f"POST /api/users with data: {request.json}")</code>)</li>
+        <li>
+          When key functions are called with their parameters (e.g.,
+          <code>print(f"calculate_total called with items: {items}")</code>)
+        </li>
+        <li>Before returning results (e.g., <code>print(f"Returning result: {result}")</code>)</li>
+        <li>When errors occur (e.g., <code>print(f"Error in process_data: {str(e)}")</code>)</li>
+      </ul>
+    </div>
+
+    <h3>3.5 Solution Documentation (2 marks)</h3>
+    <div class="requirement">
+        <p>Create a <code>SOLUTIONS.md</code> file in your project repository documenting one significant issue you encountered. Use this template:</p>
+        <div class="template"># Issue: [Brief Title]
+
+## Problem Description
+- What was the unexpected behavior?
+- What should have happened instead?
+- How was this issue discovered?
+
+## Root Cause Analysis
+- What was the underlying cause?
+- What assumptions were incorrect?
+- What dependencies were involved?
+
+## Resolution
+- How was it fixed? (or planned fix if unresolved)
+- What changes were made?
+- What alternatives were considered?
+
+## Prevention
+- How can similar issues be prevented?
+- What lessons were learned?
+- What warning signs should be watched for?</div>
+    </div>
+
+    <h3>2.1 Backup Strategy (2 marks)</h3>
+    <div class="requirement">
+      <p>
+        Your project must be uploaded to GitHub, preferably in a subfolder of your existing
+        <code>python-final-project-2024</code> repository. If you cannot add it to this repository, creating a new
+        repository is acceptable.
+      </p>
+      <p><strong>Need help with GitHub?</strong> Don't hesitate to reach out - I'm here to help!</p>
+    </div>
+
+    <h3>2.2 Access Rights (2 marks)</h3>
+    <div class="requirement">
+      <p>You only need to complete ONE of the following options:</p>
+
+      <p>
+        a. Add your professor or a fellow student as a GitHub collaborator with read access <br /><em
+          >(Recommended: This is the easiest way to get these 2 marks!)</em
+        >
+      </p>
+
+      <p>
+        b. Introduce a Python class into your program that demonstrates access control using private attributes with
+        underscore prefix ("_")
+      </p>
+
+      <p>c. Implement a custom access control feature in your application</p>
+    </div>
+
+    <h3>2.3 Security - Firewall (2 marks)</h3>
+    <div class="requirement">
+      <p>For web applications:</p>
+      <ul>
+        <li>Demonstrate port blocking/unblocking using your system's firewall</li>
+        <li>Show how it prevents client-server communication when the port is blocked</li>
+        <li>See the <code>Firewall-Port-Blocking-Guide.pdf</code> guide on Omnivox for how to do this</li>
+      </ul>
+      <p>
+        <strong>Note:</strong> Projects <i>without</i> a webserver must still demonstrate this during the meeting using
+        a simple client-server project in PyCharm. This demonstration code doesn't need to be on GitHub.
+      </p>
+    </div>
+
+    <h3>2.4 Security - Encryption (2 marks)</h3>
+    <div class="requirement">
+      <p>Implement a feature that stores sensitive information in your SQLite database in an encrypted format:</p>
+      <ul>
+        <li>Store encrypted personal information in the database</li>
+        <li>Use an environment variable to store the encryption key</li>
+        <li>Demonstrate encryption/decryption during runtime</li>
+        <li>
+          See the <code>Database-Encryption-Guide.pdf</code> guide in the Final Project section on Omnivox documents
+        </li>
+      </ul>
+      <p>
+        <strong>Note:</strong> Projects <i>without</i> a database must still demonstrate this during the meeting using a
+        simple project in PyCharm. This demonstration code doesn't need to be on GitHub.
+      </p>
+    </div>
+
+    <h2>Assessment Meeting Checklist</h2>
+    <div class="requirement">
+      <ul class="checkbox-list">
+        <li><input type="checkbox" /> Project core functionality is complete</li>
+        <li><input type="checkbox" /> One issue is documented in SOLUTIONS.md</li>
+        <li><input type="checkbox" /> Code is pushed to GitHub</li>
+        <li><input type="checkbox" /> Required security features are implemented</li>
+        <li><input type="checkbox" /> Added a peer collaborator (if choosing this option)</li>
+        <li><input type="checkbox" /> Print statements are added in key areas</li>
+        <li><input type="checkbox" /> All product demonstrations have been tested</li>
+      </ul>
+    </div>
+
+    <h2>Grading Rubric</h2>
+    <table>
+        <tr class="header-row">
+          <th colspan="6">Final Project Assessment Rubric</th>
+        </tr>
+        <tr>
+          <th class="criteria-column">Performance Criteria</th>
+          <th class="satisfaction-column">Very Satisfactory</th>
+          <th class="satisfaction-column">Satisfactory</th>
+          <th class="satisfaction-column">Unsatisfactory</th>
+          <th class="satisfaction-column">Very Unsatisfactory</th>
+          <th class="total-column">Total</th>
+        </tr>
+        <tr>
+          <td class="criteria-column">1.1 Correct breakdown of the problem</td>
+          <td class="satisfaction-column">6<br />Exceptional design and implementation with clear structure</td>
+          <td class="satisfaction-column">5<br />Solid implementation with minimal issues</td>
+          <td class="satisfaction-column">4&nbsp;&nbsp;&nbsp;&nbsp;3<br />Significant implementation flaws</td>
+          <td class="satisfaction-column">2&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;0<br />Major flaws or incomplete</td>
+          <td rowspan="10" class="total-column">/30</td>
+        </tr>
+        <tr>
+          <td class="criteria-column">2.2 Efficient modularization of code</td>
+          <td class="satisfaction-column">4<br />Well-organized code across multiple files with clear imports and folder structure</td>
+          <td class="satisfaction-column">3<br />Basic modularization with some structural issues and/or inconsistencies</td>
+          <td class="satisfaction-column">2<br />Poor code modularization and/or exceedingly long files</td>
+          <td class="satisfaction-column">1&nbsp;&nbsp;&nbsp;&nbsp;0<br />No meaningful organization</td>
+        </tr>
+        <tr>
+          <td class="criteria-column">2.3 Logical organization of instructions</td>
+          <td class="satisfaction-column">4<br />Clear and logical code flow</td>
+          <td class="satisfaction-column">3<br />Generally clear organization but with some disorganized pieces</td>
+          <td class="satisfaction-column">2<br />Confusing code with little organization</td>
+          <td class="satisfaction-column">1&nbsp;&nbsp;&nbsp;&nbsp;0<br />Chaotic or incorrect</td>
+        </tr>
+        <tr>
+          <td class="criteria-column">3.1 Efficient use of the debugger</td>
+          <td class="satisfaction-column">3<br />Successfully: (1) set breakpoint, (2) stepped through code, and (3) watched variable</td>
+          <td class="satisfaction-column">2<br />Completed only 2 of 3 requirements</td>
+          <td class="satisfaction-column">1<br />Completed only 1 of 3 requirements</td>
+          <td class="satisfaction-column">0<br />Failed to demonstrate</td>
+        </tr>
+        <tr>
+          <td class="criteria-column">3.3 Astute choice of debugging strategies</td>
+          <td class="satisfaction-column">3<br />Strategic placement of informative print statements</td>
+          <td class="satisfaction-column">2<br />Print statements present but poorly placed or formatted</td>
+          <td class="satisfaction-column">1<br />Single print statement only</td>
+          <td class="satisfaction-column">0<br />No debugging statements</td>
+        </tr>
+        <tr>
+          <td class="criteria-column">3.5 Clear record of solutions</td>
+          <td class="satisfaction-column">2<br />Thorough issue documentation</td>
+          <td class="disabled-cell"></td>
+          <td class="satisfaction-column">1<br />Partial or incomplete documentation</td>
+          <td class="satisfaction-column">0<br />Missing documentation</td>
+        </tr>
+        <tr>
+          <td class="criteria-column">2.1 Appropriate use of backup strategies</td>
+          <td class="satisfaction-column">2<br />Successfully using GitHub</td>
+          <td class="disabled-cell"></td>
+          <td class="disabled-cell"></td>
+          <td class="satisfaction-column">0<br />Not using GitHub</td>
+        </tr>
+        <tr>
+          <td class="criteria-column">2.2 Appropriate use of access rights</td>
+          <td class="satisfaction-column">2<br />GitHub collaborator successfully added</td>
+          <td class="disabled-cell"></td>
+          <td class="disabled-cell"></td>
+          <td class="satisfaction-column">0<br />No collaborator added</td>
+        </tr>
+        <tr>
+          <td class="criteria-column">2.3 Proper firewall configuration</td>
+          <td class="satisfaction-column">2<br />Successfully demonstrates port blocking<br><b>(see guide on omnivox)</b></td>
+          <td class="disabled-cell"></td>
+          <td class="disabled-cell"></td>
+          <td class="satisfaction-column">0<br />No demonstration</td>
+        </tr>
+        <tr>
+          <td class="criteria-column">2.4 Appropriate use of encryption</td>
+          <td class="satisfaction-column">2<br />Successfully implements encryption <b>(see guide on omnivox)</b></td>
+          <td class="disabled-cell"></td>
+          <td class="disabled-cell"></td>
+          <td class="satisfaction-column">0<br />No encryption implemented</td>
+        </tr>
+      </table>
+  </body>
+</html>
